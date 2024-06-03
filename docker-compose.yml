@@ -8,6 +8,9 @@ services:
       - "7001:7001"
     networks:
       - demo-mern-networks
+    volumes:
+      - ./server:/app/server
+      - /app/server/node_modules
   frontend:
     image: demo-mern-frontend
     build:
@@ -17,6 +20,12 @@ services:
       - "8000:8000"
     networks:
       - demo-mern-networks
+    volumes:
+      - ./client:/app/client
+      - /app/client/node_modules
+    links:
+      - backend
+
   database:
     image: mongo
     restart: always
