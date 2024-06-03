@@ -1,0 +1,6 @@
+[submodule "server"]
+	path = server
+	url = https://github.com/ngminhthanh12a3/docker-mern-tut-server.git
+[submodule "client"]
+	path = client
+	url = https://github.com/DESLab-Resources/docker-mern-tut-client.git
